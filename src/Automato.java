@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Automato {
-	int CONT;
-	char PALAVRA [];
+	int CONT; //contador
+	char PALAVRA []; // palavra 
 
 
 	public static void main(String[] args) {
@@ -108,7 +108,7 @@ public class Automato {
 	
 	public void qPreto() {
 		System.err.println("Palavra aceita");
-		System.err.println("Automato Branco");
+		System.err.println("Automato Preta");
 	}
 	
 	
@@ -131,7 +131,7 @@ public class Automato {
 				q8(); //vai para o estado q8 (caminho cor Branca)
 			}
 			else if (PALAVRA[CONT] == 'o') {
-				q17(); //foooo //vai para o estado q17 (caminho cor Vermelha)
+				q17(); //vai para o estado q17 (caminho cor Vermelha)
 			}
 			else {
 				qerro();
@@ -145,7 +145,7 @@ public class Automato {
 				q9(); //vai para o estado q9 (caminho cor Branca)
 			}
 			else if (PALAVRA[CONT] == 'o') {
-				q20();//ffoooo //vai para o estado q20 (caminho cor Verde)
+				q20(); //vai para o estado q20 (caminho cor Verde)
 			}
 			else {
 				qerro();
