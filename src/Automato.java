@@ -27,7 +27,7 @@ public class Automato {
 	//estado q0
 	public void q0() {
 		if (CONT < PALAVRA.length) {
-			if (PALAVRA[CONT] == 'o') {
+			if (PALAVRA[CONT] == '0') {
 				CONT++;
 				q1(); //vai para o estado q1 (caminho cor preta)
 			}
@@ -42,7 +42,7 @@ public class Automato {
 	//estado q0
 	public void q1() {
 		if (CONT < PALAVRA.length) {
-			if (PALAVRA[CONT] == 'o') {
+			if (PALAVRA[CONT] == '0') {
 				CONT++;
 				q2();
 			}
@@ -54,7 +54,7 @@ public class Automato {
 	}
 	public void q2() {
 		if (CONT < PALAVRA.length) {
-			if (PALAVRA[CONT] == 'o') {
+			if (PALAVRA[CONT] == '0') {
 				CONT++;
 				q3(); //vai para o estado q3 (caminho cor preta)
 			}
@@ -68,7 +68,7 @@ public class Automato {
 	}
 	public void q3() {
 		if (CONT < PALAVRA.length) {
-			if (PALAVRA[CONT] == 'o') {
+			if (PALAVRA[CONT] == '0') {
 				CONT++;
 				q4(); //vai para o estado q4 (caminho cor preta)
 			}
@@ -82,7 +82,7 @@ public class Automato {
 	}
 	public void q4() {
 		if (CONT < PALAVRA.length) {
-			if (PALAVRA[CONT] == 'o') {
+			if (PALAVRA[CONT] == '0') {
 				CONT++;
 				q5(); //vai para o estado q5 (caminho cor preta)
 			}
@@ -96,7 +96,7 @@ public class Automato {
 	}
 	public void q5() {
 		if (CONT < PALAVRA.length) {
-			if (PALAVRA[CONT] == 'o') {
+			if (PALAVRA[CONT] == '0') {
 				CONT++;
 				qPreto(); //vai para o estado qPreto (caminho cor preta)
 			}
@@ -130,7 +130,7 @@ public class Automato {
 				CONT++;
 				q8(); //vai para o estado q8 (caminho cor Branca)
 			}
-			else if (PALAVRA[CONT] == 'o') {
+			else if (PALAVRA[CONT] == '0') {
 				q17(); //vai para o estado q17 (caminho cor Vermelha)
 			}
 			else {
@@ -144,7 +144,7 @@ public class Automato {
 				CONT++;
 				q9(); //vai para o estado q9 (caminho cor Branca)
 			}
-			else if (PALAVRA[CONT] == 'o') {
+			else if (PALAVRA[CONT] == '0') {
 				q20(); //vai para o estado q20 (caminho cor Verde)
 			}
 			else {
@@ -267,7 +267,7 @@ public class Automato {
 	
 	public void q17() {
 		if (CONT < PALAVRA.length) {
-			if (PALAVRA[CONT] == 'o') {
+			if (PALAVRA[CONT] == '0') {
 				CONT++;
 				q18(); //vai para o estado q18 (caminho cor Vermelha)
 			}
@@ -278,7 +278,7 @@ public class Automato {
 	}
 	public void q18() {
 		if (CONT < PALAVRA.length) {
-			if (PALAVRA[CONT] == 'o') {
+			if (PALAVRA[CONT] == '0') {
 				CONT++;
 				q19(); //vai para o estado q19 (caminho cor Vermelha)
 			}
@@ -290,7 +290,7 @@ public class Automato {
 	
 	public void q19() {
 		if (CONT < PALAVRA.length) {
-			if (PALAVRA[CONT] == 'o') {
+			if (PALAVRA[CONT] == '0') {
 				CONT++;
 				qVermelho(); //vai para o estado qVermelho (caminho cor Vermelha)
 			}
@@ -307,7 +307,7 @@ public class Automato {
 	
 	public void q20() {
 		if (CONT < PALAVRA.length) {
-			if (PALAVRA[CONT] == 'o') {
+			if (PALAVRA[CONT] == '0') {
 				CONT++;
 				q21(); //vai para o estado q21 (caminho cor Verde)
 			}
@@ -318,7 +318,7 @@ public class Automato {
 	}
 	public void q21() {
 		if (CONT < PALAVRA.length) {
-			if (PALAVRA[CONT] == 'o') {
+			if (PALAVRA[CONT] == '0') {
 				CONT++;
 				qVerde(); //vai para o estado qVerde (caminho cor Verde)
 			}
