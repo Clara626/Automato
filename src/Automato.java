@@ -8,6 +8,9 @@ public class Automato {
 	public static void main(String[] args) {
 		Automato AUTOMATO = new Automato();
 		String SENTENCA;
+		
+		//ler a entrada(sentença) 
+		//usa procedimentos(maneira mais fácil e visual)
 		Scanner ENTRADA = new Scanner(System.in);
 		System.out.println("Entre com a sentença:");
 		SENTENCA = ENTRADA.nextLine();
@@ -15,26 +18,28 @@ public class Automato {
 		AUTOMATO.iniciar();
 	}
 	
-	
+	//iniciar o autômato em q0
 	public void iniciar() {
 		CONT = 0;
 		q0();
 	}
 	
+	//estado q0
 	public void q0() {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'o') {
 				CONT++;
-				q1();
+				q1(); //vai para o estado q1 (caminho cor preta)
 			}
 			else if (PALAVRA[CONT] == 'f') {
-				q6();
+				q6(); //vai para o estado q6 (caminho cor Branca)
 			}
 			else {
-				qerro();
+				qerro(); ////erro palavra não aceita
 			}
 		}
 	}
+	//estado q0
 	public void q1() {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'o') {
@@ -51,10 +56,10 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'o') {
 				CONT++;
-				q3();
+				q3(); //vai para o estado q3 (caminho cor preta)
 			}
 			else if (PALAVRA[CONT] == 'f') {
-				q11();
+				q11(); //vai para o estado q1 (caminho cor Ciano)
 			}
 			else {
 				qerro();
@@ -65,10 +70,10 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'o') {
 				CONT++;
-				q4();
+				q4(); //vai para o estado q4 (caminho cor preta)
 			}
 			else if (PALAVRA[CONT] == 'f') {
-				q14();
+				q14(); //vai para o estado q14 (caminho cor Magenta)
 			}
 			else {
 				qerro();
@@ -79,10 +84,10 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'o') {
 				CONT++;
-				q5();
+				q5(); //vai para o estado q5 (caminho cor preta)
 			}
 			else if (PALAVRA[CONT] == 'f') {
-				q16();
+				q16(); //vai para o estado q16 (caminho cor Azul)
 			}
 			else {
 				qerro();
@@ -93,7 +98,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'o') {
 				CONT++;
-				qPreto();
+				qPreto(); //vai para o estado qPreto (caminho cor preta)
 			}
 			else {
 				qerro();
@@ -111,7 +116,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'f') {
 				CONT++;
-				q7();
+				q7(); //vai para o estado q7 (caminho cor Branca)
 			}
 			else {
 				qerro();
@@ -123,10 +128,10 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'f') {
 				CONT++;
-				q8();
+				q8(); //vai para o estado q8 (caminho cor Branca)
 			}
 			else if (PALAVRA[CONT] == 'o') {
-				q17(); //foooo
+				q17(); //foooo //vai para o estado q17 (caminho cor Vermelha)
 			}
 			else {
 				qerro();
@@ -137,10 +142,10 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'f') {
 				CONT++;
-				q9();
+				q9(); //vai para o estado q9 (caminho cor Branca)
 			}
-			else if (PALAVRA[CONT] == 'c') {
-				q20();//ajeitar
+			else if (PALAVRA[CONT] == 'o') {
+				q20();//ffoooo //vai para o estado q20 (caminho cor Verde)
 			}
 			else {
 				qerro();
@@ -151,10 +156,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'f') {
 				CONT++;
-				q10();
-			}
-			else if (PALAVRA[CONT] == 'c') {
-				q3();//ajeitar
+				q10(); //vai para o estado q10 (caminho cor Branca)
 			}
 			else {
 				qerro();
@@ -165,10 +167,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'f') {
 				CONT++;
-				qBranco();
-			}
-			else if (PALAVRA[CONT] == 'c') {
-				q3();//ajeitar
+				qBranco(); //vai para o estado qBranco (caminho cor Branca)
 			}
 			else {
 				qerro();
@@ -185,7 +184,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'f') {
 				CONT++;
-				q12();
+				q12(); //vai para o estado q12 (caminho cor Ciano)
 			}
 			else {
 				qerro();
@@ -196,7 +195,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'f') {
 				CONT++;
-				q13();
+				q13(); //vai para o estado q13 (caminho cor Ciano)
 			}
 			else {
 				qerro();
@@ -208,7 +207,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'f') {
 				CONT++;
-				qCyan();
+				qCyan(); //vai para o estado qCyan (caminho cor Ciano)
 			}
 			else {
 				qerro();
@@ -225,7 +224,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'f') {
 				CONT++;
-				q15();
+				q15(); //vai para o estado q15 (caminho cor Magenta)
 			}
 			else {
 				qerro();
@@ -236,7 +235,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'f') {
 				CONT++;
-				qMagenta();
+				qMagenta(); //vai para o estado qMagenta (caminho cor Magenta)
 			}
 			else {
 				qerro();
@@ -253,7 +252,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'f') {
 				CONT++;
-				qAzul();
+				qAzul(); //vai para o estado qAzul (caminho cor Azul)
 			}
 			else {
 				qerro();
@@ -270,7 +269,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'o') {
 				CONT++;
-				q18();
+				q18(); //vai para o estado q18 (caminho cor Vermelha)
 			}
 			else {
 				qerro();
@@ -281,7 +280,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'o') {
 				CONT++;
-				q19();
+				q19(); //vai para o estado q19 (caminho cor Vermelha)
 			}
 			else {
 				qerro();
@@ -293,7 +292,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'o') {
 				CONT++;
-				qVermelho();
+				qVermelho(); //vai para o estado qVermelho (caminho cor Vermelha)
 			}
 			else {
 				qerro();
@@ -310,7 +309,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'o') {
 				CONT++;
-				q21();
+				q21(); //vai para o estado q21 (caminho cor Verde)
 			}
 			else {
 				qerro();
@@ -321,7 +320,7 @@ public class Automato {
 		if (CONT < PALAVRA.length) {
 			if (PALAVRA[CONT] == 'o') {
 				CONT++;
-				qVerde();
+				qVerde(); //vai para o estado qVerde (caminho cor Verde)
 			}
 			else {
 				qerro();
@@ -334,7 +333,7 @@ public class Automato {
 	}
 	
 	
-	
+	//erro palavra não aceita 
 	public void qerro() {
 		System.err.println("Palavra Rejeitada");
 	}
